@@ -23,7 +23,6 @@ frontend/dist/
 frontend/.vite/
 
 # Env files (contain secrets)
-.env
 .env.local
 .env.*.local
 backend/.env

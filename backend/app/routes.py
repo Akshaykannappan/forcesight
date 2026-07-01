@@ -2,6 +2,7 @@
 
 import logging
 import sqlite3
+import time
 
 from fastapi import APIRouter, HTTPException
 
@@ -60,7 +61,10 @@ def chat(request: ChatRequest) -> ChatResponse:
             continue
 
         try:
+            start_time = time.perf_counter()
             rows = run_query(clean_sql)
+            elapsed = round((time.perf_counter() - start_time) * 1000, 2)
+            logger.info("Query executed in %sms, returned %d rows", elapsed, len(rows))
         except sqlite3.Error as exc:
             logger.warning("SQL execution failed (attempt %d): %s", attempt, exc)
             previous_error = str(exc)
