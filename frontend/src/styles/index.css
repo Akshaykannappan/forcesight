@@ -1,0 +1,56 @@
+/* ForceSight Global Styles */
+:root {
+  --brand:        #4f46e5;   /* indigo-600 */
+  --brand-dark:   #4338ca;   /* indigo-700 */
+  --brand-light:  #eef2ff;   /* indigo-50  */
+
+  --text-primary:   #1e293b;
+  --text-secondary: #64748b;
+  --text-muted:     #94a3b8;
+
+  --surface:      #ffffff;
+  --surface-alt:  #f8fafc;
+  --border:       #e2e8f0;
+  --border-focus: rgba(79, 70, 229, 0.4);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+
+  /* legacy aliases kept so nothing breaks */
+  --ast-global-color-0: var(--brand);
+  --ast-global-color-1: var(--brand-dark);
+  --ast-global-color-2: var(--text-primary);
+  --ast-global-color-3: #334155;
+  --ast-global-color-4: var(--surface-alt);
+  --ast-global-color-5: var(--surface);
+  --ast-global-color-6: var(--border);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff 0%, #fafafa 60%, #f0fdf4 100%);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 16px;
+}
