@@ -50,7 +50,7 @@ JSON response → rendered in chat UI
 
 **Frontend (`/frontend`)** — React 19 + Vite 8 chat interface with a typing indicator, loading/cancel state, clickable suggestion chips for clarification responses, and a collapsible "View SQL" section per response.
 
-**Database** — SQLite (`DB/forcesight.db`), 4 tables (`users`, `products`, `orders`, `support_tickets`) with foreign key relationships, seeded from `DB/schema_and_data (1).sql`.
+**Database** — SQLite (`DB/forcesight.db`), 4 tables (`users`, `products`, `orders`, `support_tickets`) with foreign key relationships, seeded from `DB/schema_and_data.sql`.
 
 ## Key Design Decisions & Trade-offs
 
@@ -78,7 +78,7 @@ cd DB
 python3 -c "
 import sqlite3
 conn = sqlite3.connect('forcesight.db')
-conn.executescript(open('schema_and_data (1).sql').read())
+conn.executescript(open('schema_and_data.sql').read())
 conn.commit()
 conn.close()
 print('DB created')
